@@ -1,0 +1,8 @@
+# Nunca subir copias del Excel: los datos viven solo en SharePoint
+*.xlsx
+*.xls
+*.csv
+
+.DS_Store
+Thumbs.db
+node_modules/

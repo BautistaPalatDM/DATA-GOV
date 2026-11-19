@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- GitHub Pages no permite configurar cabeceras HTTP: la política de seguridad va acá -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://login.microsoftonline.com https://graph.microsoft.com https://*.sharepoint.com; frame-src 'self' https://login.microsoftonline.com; object-src 'none'; base-uri 'self'; form-action 'self' https://login.microsoftonline.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Ingresando…</title>
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!-- Página de retorno del inicio de sesión de Microsoft (requerida por MSAL v5). No mostrar contenido. -->
+  <script src="vendor/msal-redirect-bridge.min.js"></script>
+  <script src="js/redirect.js"></script>
+</body>
+</html>

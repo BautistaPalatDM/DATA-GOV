@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- GitHub Pages no permite configurar cabeceras HTTP: la política de seguridad va acá -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://login.microsoftonline.com https://graph.microsoft.com https://*.sharepoint.com; frame-src 'self' https://login.microsoftonline.com; object-src 'none'; base-uri 'self'; form-action 'self' https://login.microsoftonline.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Reglas de negocio consensuadas · Gobierno de Datos</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="brand"><span class="brand-dot" aria-hidden="true"></span>Gobierno de Datos</span>
+      <div id="sesion" class="sesion"></div>
+    </div>
+  </header>
+
+  <main id="app" class="page" aria-live="polite">
+    <p class="estado-carga">Cargando…</p>
+  </main>
+
+  <input id="archivo-local" type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+
+  <noscript><p class="page">Este tablero necesita JavaScript habilitado.</p></noscript>
+
+  <script src="config.js"></script>
+  <script src="vendor/msal-browser.min.js"></script>
+  <script src="js/xlsx-reader.js"></script>
+  <script src="js/modelo.js"></script>
+  <script src="js/sharepoint.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
