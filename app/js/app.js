@@ -927,8 +927,10 @@
     pantalla({
       titulo: "Falta conectar con Microsoft 365",
       texto:
-        "Todavía no se cargaron tenantId y clientId en config.js (ver README, paso 1). Mientras tanto, podés ver el tablero con una copia local del Excel: se lee en tu navegador y no se sube a ningún lado.",
-      acciones: [botonLocal()],
+        esLocalhost()
+          ? "Todavía no se cargaron tenantId y clientId en config.js (ver README, pasos 3 y 4). Mientras tanto, podés probar el tablero con una copia local del Excel: se lee en tu navegador y no se sube a ningún lado."
+          : "El tablero todavía no está conectado con las cuentas de Microsoft de la empresa. Va a estar disponible en cuanto se complete la configuración.",
+      acciones: esLocalhost() ? [botonLocal()] : [],
     });
   }
 
